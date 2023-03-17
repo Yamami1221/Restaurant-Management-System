@@ -722,10 +722,10 @@ namespace RealProjectV1 {
 			this->RemoveOrderTab->Controls->Add(this->RemoveOrdersTableInfoTextBox);
 			this->RemoveOrderTab->Controls->Add(this->RemoveOrdersSelectTableComboBox);
 			this->RemoveOrderTab->Controls->Add(this->RemoveOrdersInTableTextBox);
-			this->RemoveOrderTab->Location = System::Drawing::Point(4, 37);
+			this->RemoveOrderTab->Location = System::Drawing::Point(4, 25);
 			this->RemoveOrderTab->Name = L"RemoveOrderTab";
 			this->RemoveOrderTab->Padding = System::Windows::Forms::Padding(3);
-			this->RemoveOrderTab->Size = System::Drawing::Size(1258, 632);
+			this->RemoveOrderTab->Size = System::Drawing::Size(1258, 644);
 			this->RemoveOrderTab->TabIndex = 1;
 			this->RemoveOrderTab->Text = L"Remove Order";
 			this->RemoveOrderTab->UseVisualStyleBackColor = true;
@@ -812,7 +812,7 @@ namespace RealProjectV1 {
 			this->RemoveOrdersInTableTextBox->Name = L"RemoveOrdersInTableTextBox";
 			this->RemoveOrdersInTableTextBox->ReadOnly = true;
 			this->RemoveOrdersInTableTextBox->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->RemoveOrdersInTableTextBox->Size = System::Drawing::Size(400, 620);
+			this->RemoveOrdersInTableTextBox->Size = System::Drawing::Size(400, 632);
 			this->RemoveOrdersInTableTextBox->TabIndex = 0;
 			this->RemoveOrdersInTableTextBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
@@ -1624,6 +1624,7 @@ namespace RealProjectV1 {
 		else {
 			RemoveOrdersButton->Enabled = true;
 		}
+		if (RemoveOrdersMenusQuantityTextBox->Text == "") return;
 		if (Convert::ToInt32(RemoveOrdersMenusQuantityTextBox->Text) > 99) {
 			RemoveOrdersMenusQuantityTextBox->Text = "99";
 		}
@@ -1638,6 +1639,7 @@ namespace RealProjectV1 {
 		else {
 			AddOrdersButton->Enabled = true;
 		}
+		if (AddOrdersMenusQuantityTextBox->Text == "") return;
 		if (Convert::ToInt32(AddOrdersMenusQuantityTextBox->Text) > 99) {
 			AddOrdersMenusQuantityTextBox->Text = "99";
 		}
@@ -1750,6 +1752,12 @@ namespace RealProjectV1 {
 		cmd->Parameters->AddWithValue("@Name", tables[tableIndex]->getName());
 		cmd->ExecuteNonQuery();
 		CheckOutComboBox->Text = "";
+		CheckOutComboBox->Items->Clear();
+		for (int i = 0; i < tables->Length; i++) {
+			if (tables[i]->getIsAvailable() == false) {
+				CheckOutComboBox->Items->Add(tables[i]->getName());
+			}
+		}
 		CheckOutButton->Enabled = false;
 	}
 };
