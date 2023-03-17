@@ -438,10 +438,10 @@ namespace RealProjectV1 {
 			// EditTableTab
 			// 
 			this->EditTableTab->Controls->Add(this->EditTableContainer);
-			this->EditTableTab->Location = System::Drawing::Point(4, 37);
+			this->EditTableTab->Location = System::Drawing::Point(4, 25);
 			this->EditTableTab->Name = L"EditTableTab";
 			this->EditTableTab->Padding = System::Windows::Forms::Padding(3);
-			this->EditTableTab->Size = System::Drawing::Size(1258, 632);
+			this->EditTableTab->Size = System::Drawing::Size(1258, 644);
 			this->EditTableTab->TabIndex = 2;
 			this->EditTableTab->Text = L"Edit Table";
 			this->EditTableTab->UseVisualStyleBackColor = true;
@@ -460,8 +460,8 @@ namespace RealProjectV1 {
 			// EditTableContainer.Panel2
 			// 
 			this->EditTableContainer->Panel2->Controls->Add(this->RemoveTableGroupBox);
-			this->EditTableContainer->Size = System::Drawing::Size(1252, 626);
-			this->EditTableContainer->SplitterDistance = 313;
+			this->EditTableContainer->Size = System::Drawing::Size(1252, 638);
+			this->EditTableContainer->SplitterDistance = 319;
 			this->EditTableContainer->TabIndex = 1;
 			// 
 			// AddTableGroupBox
@@ -476,7 +476,7 @@ namespace RealProjectV1 {
 				static_cast<System::Byte>(0)));
 			this->AddTableGroupBox->Location = System::Drawing::Point(3, 3);
 			this->AddTableGroupBox->Name = L"AddTableGroupBox";
-			this->AddTableGroupBox->Size = System::Drawing::Size(1246, 307);
+			this->AddTableGroupBox->Size = System::Drawing::Size(1246, 313);
 			this->AddTableGroupBox->TabIndex = 0;
 			this->AddTableGroupBox->TabStop = false;
 			this->AddTableGroupBox->Text = L"Add Table";
@@ -545,7 +545,7 @@ namespace RealProjectV1 {
 				static_cast<System::Byte>(0)));
 			this->RemoveTableGroupBox->Location = System::Drawing::Point(3, 3);
 			this->RemoveTableGroupBox->Name = L"RemoveTableGroupBox";
-			this->RemoveTableGroupBox->Size = System::Drawing::Size(1246, 303);
+			this->RemoveTableGroupBox->Size = System::Drawing::Size(1246, 309);
 			this->RemoveTableGroupBox->TabIndex = 1;
 			this->RemoveTableGroupBox->TabStop = false;
 			this->RemoveTableGroupBox->Text = L"Remove Table";
@@ -722,10 +722,10 @@ namespace RealProjectV1 {
 			this->RemoveOrderTab->Controls->Add(this->RemoveOrdersTableInfoTextBox);
 			this->RemoveOrderTab->Controls->Add(this->RemoveOrdersSelectTableComboBox);
 			this->RemoveOrderTab->Controls->Add(this->RemoveOrdersInTableTextBox);
-			this->RemoveOrderTab->Location = System::Drawing::Point(4, 25);
+			this->RemoveOrderTab->Location = System::Drawing::Point(4, 37);
 			this->RemoveOrderTab->Name = L"RemoveOrderTab";
 			this->RemoveOrderTab->Padding = System::Windows::Forms::Padding(3);
-			this->RemoveOrderTab->Size = System::Drawing::Size(1258, 644);
+			this->RemoveOrderTab->Size = System::Drawing::Size(1258, 632);
 			this->RemoveOrderTab->TabIndex = 1;
 			this->RemoveOrderTab->Text = L"Remove Order";
 			this->RemoveOrderTab->UseVisualStyleBackColor = true;
@@ -812,17 +812,17 @@ namespace RealProjectV1 {
 			this->RemoveOrdersInTableTextBox->Name = L"RemoveOrdersInTableTextBox";
 			this->RemoveOrdersInTableTextBox->ReadOnly = true;
 			this->RemoveOrdersInTableTextBox->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->RemoveOrdersInTableTextBox->Size = System::Drawing::Size(400, 632);
+			this->RemoveOrdersInTableTextBox->Size = System::Drawing::Size(400, 620);
 			this->RemoveOrdersInTableTextBox->TabIndex = 0;
 			this->RemoveOrdersInTableTextBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// EditMenuTab
 			// 
 			this->EditMenuTab->Controls->Add(this->EditMenuContainer);
-			this->EditMenuTab->Location = System::Drawing::Point(4, 37);
+			this->EditMenuTab->Location = System::Drawing::Point(4, 25);
 			this->EditMenuTab->Name = L"EditMenuTab";
 			this->EditMenuTab->Padding = System::Windows::Forms::Padding(3);
-			this->EditMenuTab->Size = System::Drawing::Size(1258, 632);
+			this->EditMenuTab->Size = System::Drawing::Size(1258, 644);
 			this->EditMenuTab->TabIndex = 2;
 			this->EditMenuTab->Text = L"Edit Menu";
 			this->EditMenuTab->UseVisualStyleBackColor = true;
@@ -841,8 +841,8 @@ namespace RealProjectV1 {
 			// EditMenuContainer.Panel2
 			// 
 			this->EditMenuContainer->Panel2->Controls->Add(this->RemoveMenuGroupBox);
-			this->EditMenuContainer->Size = System::Drawing::Size(1252, 626);
-			this->EditMenuContainer->SplitterDistance = 313;
+			this->EditMenuContainer->Size = System::Drawing::Size(1252, 638);
+			this->EditMenuContainer->SplitterDistance = 319;
 			this->EditMenuContainer->TabIndex = 0;
 			// 
 			// AddMenuGroupBox
@@ -856,7 +856,7 @@ namespace RealProjectV1 {
 				static_cast<System::Byte>(0)));
 			this->AddMenuGroupBox->Location = System::Drawing::Point(0, 0);
 			this->AddMenuGroupBox->Name = L"AddMenuGroupBox";
-			this->AddMenuGroupBox->Size = System::Drawing::Size(1252, 313);
+			this->AddMenuGroupBox->Size = System::Drawing::Size(1252, 319);
 			this->AddMenuGroupBox->TabIndex = 0;
 			this->AddMenuGroupBox->TabStop = false;
 			this->AddMenuGroupBox->Text = L"Add Menu";
@@ -924,7 +924,7 @@ namespace RealProjectV1 {
 				static_cast<System::Byte>(0)));
 			this->RemoveMenuGroupBox->Location = System::Drawing::Point(0, 0);
 			this->RemoveMenuGroupBox->Name = L"RemoveMenuGroupBox";
-			this->RemoveMenuGroupBox->Size = System::Drawing::Size(1252, 309);
+			this->RemoveMenuGroupBox->Size = System::Drawing::Size(1252, 315);
 			this->RemoveMenuGroupBox->TabIndex = 0;
 			this->RemoveMenuGroupBox->TabStop = false;
 			this->RemoveMenuGroupBox->Text = L"Remove Menu";
@@ -1624,6 +1624,9 @@ namespace RealProjectV1 {
 		else {
 			RemoveOrdersButton->Enabled = true;
 		}
+		if (Convert::ToInt32(RemoveOrdersMenusQuantityTextBox->Text) < 1) {
+			RemoveOrdersMenusQuantityTextBox->Text = "1";
+		}
 	}
 	private: System::Void AddOrdersMenusQuantityTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		if (AddOrdersSelectTableComboBox->Text == "" || AddOrdersSelectMenusComboBox->Text == "" || AddOrdersMenusQuantityTextBox->Text == "") {
@@ -1631,6 +1634,9 @@ namespace RealProjectV1 {
 		}
 		else {
 			AddOrdersButton->Enabled = true;
+		}
+		if (Convert::ToInt32(AddOrdersMenusQuantityTextBox->Text) < 1) {
+			AddOrdersMenusQuantityTextBox->Text = "1";
 		}
 	}
 	private: System::Void AddMenuNameTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -1651,6 +1657,10 @@ namespace RealProjectV1 {
 	}
 	private: System::Void AddMenuButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		menu^ tempMenu = gcnew menu(AddMenuNameTextBox->Text, Convert::ToInt32(AddMenuPriceTextBox->Text));
+		if (Convert::ToInt32(AddMenuPriceTextBox->Text) < 0) {
+			MessageBox::Show("Price cannot be negative.", "Add Menu", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
 		for (int i = 0; i < menus->Length; i++) {
 			if (menus[i]->getName() == tempMenu->getName()) {
 				MessageBox::Show("Menu " + tempMenu->getName() + " already exists in the database.", "Add Menu", MessageBoxButtons::OK, MessageBoxIcon::Error);
