@@ -1624,6 +1624,9 @@ namespace RealProjectV1 {
 		else {
 			RemoveOrdersButton->Enabled = true;
 		}
+		if (Convert::ToInt32(RemoveOrdersMenusQuantityTextBox->Text) > 99) {
+			RemoveOrdersMenusQuantityTextBox->Text = "99";
+		}
 		if (Convert::ToInt32(RemoveOrdersMenusQuantityTextBox->Text) < 1) {
 			RemoveOrdersMenusQuantityTextBox->Text = "1";
 		}
@@ -1634,6 +1637,9 @@ namespace RealProjectV1 {
 		}
 		else {
 			AddOrdersButton->Enabled = true;
+		}
+		if (Convert::ToInt32(AddOrdersMenusQuantityTextBox->Text) > 99) {
+			AddOrdersMenusQuantityTextBox->Text = "99";
 		}
 		if (Convert::ToInt32(AddOrdersMenusQuantityTextBox->Text) < 1) {
 			AddOrdersMenusQuantityTextBox->Text = "1";
